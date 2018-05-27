@@ -1,65 +1,58 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900");
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.75em;
-  font-size: 16px;
-  background-color: #222;
-  color: #aaa;
-  position: relative;
+    font-family: "Roboto", sans-serif;
+    background: #545454;
+    margin: 0;
 }
 
-/*.status {
-  height: 50px;
-  width: 200px;
-}*/
-
-div.status {
-  margin: 5px;
-  display: inline-table;
-  padding: 15px;
+.status.good, .status.bad {
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease;
 }
 
-status {
-  height: 40px;
-  width: 200px;
+.status:hover {
+    box-shadow: 0 12px 5px -5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .status.good {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #3c763d;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
+    background: #99ff99;
+    float: left;
 }
 
 .status.bad {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
+    float: right;
 }
 
-.status.unknown {
-  background-color: grey;
+h1 {
+    text-align: center;
+    font-size: 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    margin: 0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    color: #e7e7e7;
 }
 
-/* Footer */
+#app {
+    margin: 83px 15px 15px;
+    min-height: calc(100% - 158px);
+}
+
+h1, #footer {
+    text-transform: uppercase;
+}
+
 #footer {
-  width: 100%;
-  padding: 16px;
-  padding-bottom: 16px;
-  background-color:  #222;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+    position: static;
+    box-sizing: border-box;
+    font-size: 12px;
+    clear: both;
 }
