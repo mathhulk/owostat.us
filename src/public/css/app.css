@@ -52,22 +52,22 @@ status {
 
 /* Footer */
 #footer {
-  width:100%;
-  padding:20px;
-  padding-bottom:16px;
-  background-color: transparent;
-  color:white;
-  font-weight:bold;
-  font-size:18px;
-  text-align:left;
-  position:fixed;    /*Here's what sticks it*/
-  bottom:0;          /*to the bottom of the body*/
-  left:0;            /*and to the left of the body.*/
+  width: 100%;
+  padding: 16px;
+  padding-bottom: 16px;
+  background-color:  #222;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  position: fixed;    /*Here's what sticks it*/
+  bottom: 0;          /*to the bottom of the body*/
+  left: 0;            /*and to the left of the body.*/
 
   /*EFFECTS*/
-  transition:.33s linear;
+  transition: .33s linear;
 }
 
 #footer:hover {
-  background:black;
+  background:#f2dede;
 }
