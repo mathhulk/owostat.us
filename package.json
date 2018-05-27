@@ -1,0 +1,23 @@
+{
+  "name": "owo-domain-checker",
+  "version": "1.0.0",
+  "description": "Checks the status of domains for owo.whats-th.is",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itslukej/owo-domain-checker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itslukej/owo-domain-checker/issues"
+  },
+  "homepage": "https://github.com/itslukej/owo-domain-checker#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3"
+  }
+}

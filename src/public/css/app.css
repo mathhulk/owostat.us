@@ -1,0 +1,16 @@
+.status {
+  height: 50px;
+  width: 200px;
+}
+
+.status.good {
+  background-color: green;
+}
+
+.status.bad {
+  background-color: red;
+}
+
+.status.unknown {
+  background-color: grey;
+}
