@@ -8,8 +8,19 @@ body {
   color: #aaa;
 }
 
-.status {
+/*.status {
   height: 50px;
+  width: 200px;
+}*/
+
+div.status {
+  margin: 5px;
+  display: inline-table;
+  padding: 15px;
+}
+
+status {
+  height: 40px;
   width: 200px;
 }
 
