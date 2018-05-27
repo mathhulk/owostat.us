@@ -49,7 +49,6 @@ status {
   background-color: grey;
 }
 
-
 /* Footer */
 #footer {
   width: 100%;
@@ -59,15 +58,8 @@ status {
   color: white;
   font-weight: bold;
   font-size: 18px;
-  text-align: left;
-  position: fixed;    /*Here's what sticks it*/
-  bottom: 0;          /*to the bottom of the body*/
-  left: 0;            /*and to the left of the body.*/
-
-  /*EFFECTS*/
-  transition: .33s linear;
-}
-
-#footer:hover {
-  background:#f2dede;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
