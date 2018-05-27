@@ -7,7 +7,7 @@ const status = {};
 
 function statusChange(url, newStatus) {
   const oldStatus = status[url] || 'unknown';
-  if(oldStatus != newStatus) console.log(`[${newStatus === 'bad' ? 'WARN' : 'INFO'}] ${url} changed from status ${oldStatus} to ${newStatus}`);
+  if(oldStatus != newStatus) console.log(`[${newStatus === 'down' ? 'WARN' : 'INFO'}] ${url} changed from status ${oldStatus} to ${newStatus}`);
   status[url] = newStatus;
 }
 
@@ -17,9 +17,9 @@ async function checkDomains() {
       await axios.get(`https://${url}/${constants.testFile}`);
 
       // It works
-      statusChange(url, 'good');
+      statusChange(url, 'up');
     } catch(err) {
-      statusChange(url, 'bad');
+      statusChange(url, 'down');
     }
   }
 }
