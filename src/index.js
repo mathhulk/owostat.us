@@ -58,6 +58,6 @@ app.get('/status', (req, res) => {
   res.json(status);
 });
 
-app.get('/favicon.ico', (req, res) => res.status(204));
+app.get('/src/public/favicon.ico', (req, res) => res.status(204));
 
 app.listen(8999);
