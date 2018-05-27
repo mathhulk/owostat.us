@@ -55,11 +55,11 @@ status {
   width:100%;
   padding:20px;
   padding-bottom:16px;
-  background-color: #222;
+  background-color: transparent;
   color:white;
   font-weight:bold;
   font-size:18px;
-  text-align:center;
+  text-align:left;
   position:fixed;    /*Here's what sticks it*/
   bottom:0;          /*to the bottom of the body*/
   left:0;            /*and to the left of the body.*/
