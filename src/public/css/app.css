@@ -1,3 +1,7 @@
+.app {
+  background-color: grey;
+}
+
 .status {
   height: 50px;
   width: 200px;
