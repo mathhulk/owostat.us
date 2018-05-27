@@ -3,11 +3,11 @@
   width: 200px;
 }
 
-.status.up {
+.status.good {
   background-color: green;
 }
 
-.status.down {
+.status.bad {
   background-color: red;
 }
 
