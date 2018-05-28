@@ -4,32 +4,40 @@ body {
     background: #222;
     margin: 0;
 }
-.status {
+.sort .select {
+	font-size: 15px;
+	font-weight: bold;
+}
+.status, 
+.sort .select {
     border: none;
     border-radius: 2rem;
     box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.3);
     transition: all 0.1s ease;
     margin: 8px;
     padding: 15px;
+	display: inline-block;
 }
-.status:hover {
+.status:hover, 
+.sort .select:hover {
     box-shadow: 0 12px 5px -5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-}
-#app:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 .status.good {
     background: #64ce87;
     color: #1f6135;
-    float: left;
 }
 .status.bad {
-    float: right;
     background: #ff5e5e;
     color: #9c1b1b;
+}
+.status.unknown {
+	background: #e7e7e7;
+	color: #545454;
+}
+.sort .select {
+	background: #4e61f0;
+	color: #fff;
 }
 h1 {
     text-align: center;
@@ -40,30 +48,37 @@ h1 {
     left: 0;
     background: #000;
     margin: 0;
+	box-sizing: border-box;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     color: #e7e7e7;
 }
-#app {
+.sort {
+	margin: 83px 15px 0;
+	text-align: center;
+}
+.application {
     box-sizing: border-box;
-    margin: 90px 15px 15px;
-    min-height: calc(100vh - 90px - 15px - 15px - 15px - 14px);
+    margin: 0 15px 15px;
+	text-align: center;
 }
 h1,
-#footer {
+footer,
+.sort .select {
     text-transform: uppercase;
 }
-#footer {
-    box-sizing: border-box;
+footer {
     font-size: 12px;
-    clear: both;
-    width: 100%;
-    padding: 15px;
-    background: #000;
     text-align: center;
     color: #e7e7e7;
     font-weight: bold;
+	margin: 0 15px 15px;
 }
 ::-webkit-scrollbar { 
     display: none; 
+}
+@media screen and (max-width: 575.98px) {
+	h1 {
+		font-size: 15px;
+	}
 }
