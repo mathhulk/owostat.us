@@ -1,3 +1,2 @@
-# owo-domain-checker
-Checks the status of domains for owo.whats-th.is
-RLME is better
+# owostat.us
+owostat.us is used for displaying the public status of domains available with OwO.
