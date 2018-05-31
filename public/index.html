@@ -52,13 +52,13 @@
 	</head>
 	<body>
 		<div class="sort">
-			<div class="select" data-sort="good">Connected</div>
-			<div class="select" data-sort="all">Sort</div>
-			<div class="select" data-sort="bad">Disconnected</div>
+			<div class="select" data-sort="good">Alive domains</div>
+			<div class="select" data-sort="all">All domains</div>
+			<div class="select" data-sort="bad">Down domains</div>
 		</div>
 	
 		<div class="application">
-			<h1>public status for owo</h1>
+			<h1>public status for owo | poered by owo</h1>
 			<div class="status" v-bind:class="s" v-for="(s, url) in status">
 				{{ url.replace("example.", "*.") }}
 			</div>
