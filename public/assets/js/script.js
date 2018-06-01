@@ -1,6 +1,4 @@
-//
-//	VARIABLES
-//
+// variables
 var application = new Vue({
 	el: ".application",
 	data: {
@@ -8,9 +6,7 @@ var application = new Vue({
 	}
 });
 
-//
-//	EVENTS
-//
+// api request events
 $(document).ready(function() {
 	$.getJSON("/status", function(data) {
 		application.status = data;

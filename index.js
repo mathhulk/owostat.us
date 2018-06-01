@@ -1,6 +1,4 @@
-//
-//	VARIABLES
-//
+// internal variables
 const axios = require("axios");
 const path = require("path");
 const Express = require("express");
@@ -10,9 +8,7 @@ const READ = "https://whats-th.is/public-cdn-domains.txt", TEST = "1e661d";
 
 var status = {};
 
-//
-//	FUNCTIONS
-//
+// functions
 function validateDomain(domain) {
 	return !(domain === "" || domain.substring(0, 1) === "#" || domain.includes(":"));
 }
@@ -47,9 +43,7 @@ async function getDomains(uri, file) {
 	setTimeout(getDomains, 1000 * 60 * 5, uri, file);
 }
 
-//
-//	REQUEST
-//
+// express webserver
 getDomains(READ, TEST);
 
 express.use(Express.static(path.join(__dirname, "public")));
