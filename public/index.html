@@ -7,7 +7,7 @@
 		
 		<title>owostat.us</title>
 		
-		<meta name="description" content="Public status for domains available on OwO.">
+		<meta name="description" content="Public status for services and domains from OwO.">
 		<meta name="application-name" content="owostat.us">
 		<meta name="theme-color" content="#545454">
 		<meta name="mobile-web-app-capable" content="yes">
@@ -16,7 +16,7 @@
 		<meta property="og:url" content="https://owostat.us">
 		<meta property="og:site_name" content="owostat.us">
 		<meta property="og:image" content="assets/img/logo.png">
-		<meta property="og:description" content="Public status for domains available on OwO.">
+		<meta property="og:description" content="Public status for services and domains from OwO.">
 		<meta property="og:type" content="website">
 		
 		<meta name="msapplication-tooltip" content="owostat.us">
@@ -51,22 +51,28 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
-		<div class="sort">
-			<div class="select" data-sort="good">Connected</div>
-			<div class="select" data-sort="all">Sort</div>
-			<div class="select" data-sort="bad">Disconnected</div>
-		</div>
+		<h1>public status for owo</h1>
 	
-		<div class="application">
-			<h1>public status for owo</h1>
-			<div class="status" v-bind:class="s" v-for="(s, url) in status">
-				{{ url.replace("example.", "*.") }}
-			</div>
+		<div class="sort">
+			<div class="select" data-sort="all">All</div>
+			<div class="select" data-sort="true">Reachable</div>
+			<div class="select" data-sort="false">Unreachable</div>
 		</div>
 		
-		<footer>owostat.us • hosted by itsaderm • created by itslukej • design by mathhulk</footer>
+		<h2>Services</h2>
 		
-		<script src="assets/js/vue.min.js"></script>
+		<div class="services">
+			<!-- services -->
+		</div>
+		
+		<h2>Domains</h2>
+	
+		<div class="domains">
+			<!-- domains -->
+		</div>
+		
+		<footer>owostat.us • hosted by itsaderm • created by itslukej • maintained by mathhulk</footer>
+		
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/script.js"></script>
 	</body>

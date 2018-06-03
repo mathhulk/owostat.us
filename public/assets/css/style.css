@@ -23,17 +23,13 @@ body {
     box-shadow: 0 12px 5px -5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
-.status.good {
+.status.true {
     background: #64ce87;
     color: #1f6135;
 }
-.status.bad {
+.status.false {
     background: #ff5e5e;
     color: #9c1b1b;
-}
-.status.unknown {
-	background: #e7e7e7;
-	color: #545454;
 }
 .sort .select {
 	background: #4e61f0;
@@ -53,21 +49,31 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     color: #e7e7e7;
 }
+h2 {
+	text-align: center;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 15px;
+	color: #e7e7e7;
+	text-transform: uppercase;
+	margin: 0;
+}
 .sort {
-	margin: 83px 15px 0;
+	padding: 92px 15px 15px;
+	background: rgba(0, 0, 0, 0.4);
 	text-align: center;
 }
-.application {
+.domains, .services {
     box-sizing: border-box;
-    margin: 0 15px 15px;
 	text-align: center;
+	padding: 15px;
 }
 h1,
 footer,
 .sort .select {
     text-transform: uppercase;
 }
-footer {
+footer, .title {
     font-size: 12px;
     text-align: center;
     color: #e7e7e7;
