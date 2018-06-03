@@ -16,23 +16,15 @@ function toggleTitle() {
 //	EVENTS
 //
 $(document).ready(function() {
+	$(".sort").show();
+	$("h2:first-of-type").css("padding-top", "30px");
+	
 	$(document).on("focus", ".sort .search", function() {
 		$(this).removeAttr("placeholder");
 	});
 
 	$(document).on("blur", ".sort .search", function() {
 		$(this).attr("placeholder", "Find");
-	});
-	
-	$.get("/templates/status.txt", function(template) {
-		$.getJSON("/status", function(status) {
-			$.each(status.domains, function(index, value) {
-				$(".domains").append(template.replace("{{ domain }}", index).replace("{{ status }}", value));
-			});
-			$.each(status.services, function(index, value) {
-				$(".services").append(template.replace("{{ domain }}", index).replace("{{ status }}", value));
-			});
-		});
 	});
 	
 	$(document).on("click", ".sort .select", function() {

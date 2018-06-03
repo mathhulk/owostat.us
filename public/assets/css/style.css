@@ -64,18 +64,10 @@ h1 {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     color: #e7e7e7;
 }
-h1 a {
+h1 a, footer a {
 	background: #3195d5;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #19a1e2, #3195d5);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #19a1e2, #3195d5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	text-decoration: none;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-footer a {
-	background: #74ebd5;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	text-decoration: none;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -97,6 +89,10 @@ h2 {
 	background: rgba(0, 0, 0, 0.4);
 	text-align: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	display: none;
+}
+h2:first-of-type {
+	padding-top: 107px;
 }
 .domains, 
 .services {
