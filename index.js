@@ -1,6 +1,4 @@
-//
-//	VARIABLES
-//
+// Variables
 const request = require("request");
 const path = require("path");
 const Express = require("express");
@@ -36,9 +34,7 @@ const SERVICES = {
 
 var status = {services: {}, domains: {}}, timeout;
 
-//
-//	FUNCTIONS
-//
+// Functions
 function getService(uri, name, method, code) {
 	request(uri, method, function(error, response, data) {
 		if(error) status.domains[cleanDomain(domain, true)] = false;
@@ -84,9 +80,7 @@ function getStatus(list, uri, file) {
 	timeout = setTimeout(getStatus, 5000, list, uri, file);
 }
 
-//
-//	REQUEST
-//
+// Request
 getStatus(SERVICES, DOMAINS, FILE);
 
 express.use(Express.static(path.join(__dirname, "public")));
