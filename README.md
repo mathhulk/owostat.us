@@ -1,4 +1,4 @@
-# owostat.us
+# owostat.us [![Build Status](https://travis-ci.org/mathhulk/owostat.us.svg?branch=master)](https://travis-ci.org/mathhulk/owostat.us)
 owostat.us is used for displaying the public status of services and domains from OwO. owostat.us has been made using Node.js and uses a multitude of HTTP requests to attempt connections to OwO services and domains. OwO does not have a public website for displaying the status of their services and domains, thus the purpose that this project serves.
 
 ## Contribute
