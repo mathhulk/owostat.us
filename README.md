@@ -10,4 +10,4 @@ Node.js and npm must be installed before you can use owostat.us. I also suggest 
 * Execute `npm run start` to initialize owostat.us, which can be found on port 8999
 
 ## Credit
-owostat.us was first created by [@itslukej](https://github.com/itslukej) and this repository used to be a fork. However, he has since taken down his repository and the project has been moved to this repository. The website is hosted by [@itsaderm](https://github.com/itsaderm) and is maintained by mathhulk.
+owostat.us was first created by [@itslukej](https://github.com/itslukej). However, the original author has since taken down the original project. The website is hosted by [@itsaderm](https://github.com/itsaderm) and can be found at https://owostat.us and the project is being maintained by mathhulk.
