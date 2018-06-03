@@ -1,6 +1,4 @@
-//
-//	FUNCTIONS
-//
+// variables
 function showStatus() {
 	$(".status, h2:not(:eq(2)), .services, .domains").show();
 	$("h2:eq(2)").hide();
@@ -12,9 +10,7 @@ function toggleTitle() {
 	if($("h2:visible").length === 0) $("h2:eq(2)").show();
 }
 
-//
-//	EVENTS
-//
+// api request events
 $(document).ready(function() {
 	$(document).on("focus", ".sort .search", function() {
 		$(this).removeAttr("placeholder");

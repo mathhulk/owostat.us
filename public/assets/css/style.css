@@ -116,7 +116,15 @@ footer,
     text-align: center;
     color: #e7e7e7;
     font-weight: bold;
-	margin: 0 15px 15px;
+    margin: 0 15px 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+a {
+    color: #e7e7e7;
+    font-weight: bold;
 }
 footer {
 	margin-top: 30px;
