@@ -5,8 +5,8 @@ owostat.us is used for displaying the public status of services and domains from
 Feel free to contribute to the development of owostat.us through pull requests and issue/bug reporting. Contributions are always welcome and will help make this project the best that it can be. To get started, clone this project to a local folder.
 
 ### Run
-Node.js and npm must be installed before you can use owostat.us.
-* Execute `npm install` to install packages and generate a lock file
+Node.js and npm must be installed before you can use owostat.us. 
+* Execute `yarn` to install packages and generate a lock file
 * Execute `node run start` to initialize owostat.us, which can be found on port 8999
 
 ## Credit
