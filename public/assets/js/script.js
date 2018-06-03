@@ -1,6 +1,6 @@
-//
-//	FUNCTIONS
-//
+/*
+ *	FUNCTIONS
+ */
 function showStatus() {
 	$(".status, h2:not(:eq(2)), .services, .domains").show();
 	$("h2:eq(2)").hide();
@@ -12,9 +12,9 @@ function toggleTitle() {
 	if($("h2:visible").length === 0) $("h2:eq(2)").show();
 }
 
-//
-//	EVENTS
-//
+/*
+ *	EVENTS
+ */
 $(document).ready(function() {
 	$(".sort").show();
 	$("h2:first-of-type").css("padding-top", "30px");
@@ -22,7 +22,6 @@ $(document).ready(function() {
 	$(document).on("focus", ".sort .search", function() {
 		$(this).removeAttr("placeholder");
 	});
-
 	$(document).on("blur", ".sort .search", function() {
 		$(this).attr("placeholder", "Find");
 	});

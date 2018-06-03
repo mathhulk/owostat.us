@@ -1,6 +1,6 @@
-//
-//	VARIABLES
-//
+/*
+ *	VARIABLES
+ */
 const request = require("request");
 const path = require("path");
 const fs = require("fs");
@@ -11,9 +11,9 @@ const SERVICES = require("./configuration/services.js");
 
 var website = {"/status": {services: {}, domains: {}}}, timeout;
 
-//
-//	FUNCTIONS
-//
+/*
+ *	FUNCTIONS
+ */
 function generatePage() {
 	fs.readFile(path.join(__dirname, "templates", "index.html"), "utf8", function(error, index) {
 		if(error) console.log(error);
@@ -33,7 +33,6 @@ function getService(uri, name, method, code) {
 		else website["/status"].services[name] = response && response.statusCode === code;
 	});
 }
-
 function getServices() {
 	for(var service in SERVICES) getService(SERVICES[service].uri, SERVICES[service].name, SERVICES[service].method, SERVICES[service].code);
 }
@@ -44,7 +43,6 @@ function getDomain(domain) {
 		else website["/status"].domains[cleanDomain(domain, true)] = response && response.statusCode === 200;
 	});
 }
-
 function getDomains() {
 	request("https://whats-th.is/public-cdn-domains.txt", function(error, response, data) {
 		if(error) console.log(error);
@@ -55,11 +53,9 @@ function getDomains() {
 		});
 	});
 }
-
 function isDomain(line) {
 	return !(line === "" || line.substring(0, 1) === "#" || line.includes(":"));
 }
-
 function cleanDomain(domain, reverse) {
 	if(reverse) return domain.replace("wildcard.", "*.");
 	return domain.replace("*.", "wildcard.");
@@ -73,19 +69,19 @@ function initialize() {
 	timeout = setTimeout(initialize, 5000)
 }
 
-//
-//	EXPRESS
-//
-initialize();
-
+/*
+ *	EXPRESS
+ */
 express.use(Express.static(path.join(__dirname, "public")));
-
 express.get("/", (req, res) => {
 	res.send(website["/"]);
 });
-
 express.get("/status", (req, res) => {
 	res.json(website["/status"]);
 });
-
 express.listen(8999);
+
+/*
+ *	LOAD
+ */
+initialize();

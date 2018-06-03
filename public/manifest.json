@@ -1,11 +1,11 @@
 {
-  "name": "owostat.us",
-  "short_name": "owostat.us",
+  "name": "OwO Status",
+  "short_name": "OwO",
   "lang": "en-US",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#545454",
-  "background_color": "#fff",
+  "theme_color": "#3195d5",
+  "background_color": "#222",
   "icons": [
     {
       "src": "assets/img/icons/apple-icon-57x57.png",
