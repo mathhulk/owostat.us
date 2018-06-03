@@ -7,7 +7,7 @@
 		
 		<title>owostat.us</title>
 		
-		<meta name="description" content="Public status for domains available on OwO.">
+		<meta name="description" content="Public status for services and domains from OwO.">
 		<meta name="application-name" content="owostat.us">
 		<meta name="theme-color" content="#545454">
 		<meta name="mobile-web-app-capable" content="yes">
@@ -16,7 +16,7 @@
 		<meta property="og:url" content="https://owostat.us">
 		<meta property="og:site_name" content="owostat.us">
 		<meta property="og:image" content="assets/img/logo.png">
-		<meta property="og:description" content="Public status for domains available on OwO.">
+		<meta property="og:description" content="Public status for services and domains from OwO.">
 		<meta property="og:type" content="website">
 
 		<meta name="msapplication-tooltip" content="owostat.us">
@@ -50,22 +50,31 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
-		<div class="sort">
-			<div class="select" data-sort="good">Alive domains</div>
-			<div class="select" data-sort="all">All domains</div>
-			<div class="select" data-sort="bad">Dead domains</div>
-		</div>
+		<h1>public status for <a href="https://whats-th.is" target="_blank">owo</a></h1>
 	
-		<div class="application">
-			<h1>public status for owo | poered by owo</h1>
-			<div class="status" v-bind:class="s" v-for="(s, url) in status">
-				{{ url.replace("example.", "*.") }}
-			</div>
+		<div class="sort">
+			<div class="select" data-sort="all">All</div>
+			<div class="select" data-sort="true">Reachable</div>
+			<div class="select" data-sort="false">Unreachable</div>
+			<input type="text" class="search" placeholder="Find">
 		</div>
 		
-		<footer>owostat.us • hosted by itsaderm • created by itslukej • design by mathhulk • <a href="https://github.com/itslukej/owo-domain-checker" target="_blank">github page</a></footer>
-
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		<h2>Services</h2>
+		
+		<div class="services">
+			<!-- services -->
+		</div>
+		
+		<h2>Domains</h2>
+	
+		<div class="domains">
+			<!-- domains -->
+		</div>
+		
+		<h2 class="no-results">No results</h2>
+		
+		<footer><a href="https://github.com/mathhulk/owostat.us" target="_blank">owostat.us</a> • hosted by <a href="https://github.com/itsaderm" target="_blank">itsaderm</a> • created by <a href="https://github.com/itslukej" target="_blank">itslukej</a> • maintained by <a href="https://mathhulk.com" target="_blank">mathhulk</a></footer>
+		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 		<script src="assets/js/script.js"></script>
 	</body>
