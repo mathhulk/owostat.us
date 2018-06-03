@@ -3,9 +3,9 @@
   "version": "1.0.0-beta",
   "main": "index.js",
   "description": "Public status for domains available on OwO.",
-  "author": "itslukej",
+  "author": "mathhulk",
   "contributors": [
-    "mathhulk",
+    "itslukej",
     "itsaderm"
   ],
   "scripts": {
