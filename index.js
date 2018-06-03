@@ -20,9 +20,9 @@ const SERVICES = {
 		method: "HEAD",
 		code: 200
 	},
-	mastadon: {
+	mastodon: {
 		uri: "https://uwu.social/about",
-		name: "Mastadon",
+		name: "Mastodon",
 		method: "HEAD",
 		code: 200
 	},
