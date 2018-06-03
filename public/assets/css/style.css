@@ -65,9 +65,9 @@ h1 {
     color: #e7e7e7;
 }
 h1 a {
-	background: #FF4E50;  /* fallback for old browsers */
+	background: #3195d5;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #19a1e2, #3195d5);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #19a1e2,#3195d5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to right, #19a1e2, #3195d5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	text-decoration: none;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
