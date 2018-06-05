@@ -1,5 +1,7 @@
 # owostat.us [![Build Status](https://travis-ci.org/mathhulk/owostat.us.svg?branch=master)](https://travis-ci.org/mathhulk/owostat.us)
-owostat.us is used for displaying the public status of services and domains from OwO. owostat.us has been made using Node.js and uses a multitude of HTTP requests to attempt connections to OwO services and domains. OwO does not have a public website for displaying the status of their services and domains, thus the purpose that this project serves.
+OwO uses a range of domains and services to provide their users with private file hosting. The purpose of owostat.us is to present the status of these services and domains to users.
+
+owostat.us has been created with Node.js and uses a multitude of HTTP requests in order to attempt connections to OwO services and domains. OwO does not have a public website for displaying the status of their services and domains, thus the purpose that this project serves.
 
 ## Contribute
 Feel free to contribute to the development of owostat.us through pull requests and issue/bug reporting. Contributions are always welcome and will help make this project the best that it can be. To get started, clone this project to a local folder.
