@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900");
+
 body {
     font-family: "Roboto", sans-serif;
     background: #222;
     margin: 0;
 }
+
 .sort .select, 
 .sort .search {
 	font-size: 15px;
 	font-weight: bold;
 }
+
 .status, 
 .sort .select, 
 .sort .search {
@@ -20,36 +23,44 @@ body {
     padding: 15px;
 	display: inline-block;
 }
+
 .status:hover, 
 .sort .select:hover {
     box-shadow: 0 12px 5px -5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
+
 ::placeholder {
 	color: #fff;
 	text-transform: uppercase;
 }
+
 :focus {
 	outline: none;
 }
+
 .status.true {
     background: #64ce87;
     color: #1f6135;
 }
+
 .status.false {
     background: #ff5e5e;
     color: #9c1b1b;
 }
+
 .sort .select {
 	background: #4e61f0;
 	color: #fff;
 }
+
 .sort .search {
 	background: purple;
 	color: #fff;
 	text-align: center;
-	width: 120px;
+	width: 80px;
 }
+
 h1 {
     text-align: center;
     font-size: 30px;
@@ -64,6 +75,7 @@ h1 {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     color: #e7e7e7;
 }
+
 h1 a, footer a {
 	background: #3195d5;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #19a1e2, #3195d5);  /* Chrome 10-25, Safari 5.1-6 */
@@ -72,6 +84,7 @@ h1 a, footer a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 h2 {
 	text-align: center;
 	box-sizing: border-box;
@@ -81,9 +94,11 @@ h2 {
 	text-transform: uppercase;
 	margin: 0;
 }
+
 .no-results {
 	display: none;
 }
+
 .sort {
 	padding: 92px 15px 15px;
 	background: rgba(0, 0, 0, 0.4);
@@ -91,20 +106,24 @@ h2 {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 	display: none;
 }
+
 h2:first-of-type {
 	padding-top: 107px;
 }
+
 .domains, 
 .services {
     box-sizing: border-box;
 	text-align: center;
 	padding: 15px 15px 0;
 }
+
 h1,
 footer,
 .sort .select {
     text-transform: uppercase;
 }
+
 footer, 
 .title {
     font-size: 12px;
@@ -113,12 +132,15 @@ footer,
     font-weight: bold;
 	margin: 0 15px 15px;
 }
+
 footer {
 	margin-top: 30px;
 }
+
 ::-webkit-scrollbar { 
     display: none; 
 }
+
 @media screen and (max-width: 575.98px) {
 	h1 {
 		font-size: 15px;

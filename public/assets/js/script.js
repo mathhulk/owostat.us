@@ -22,6 +22,7 @@ $(document).ready(function() {
 	$(document).on("focus", ".sort .search", function() {
 		$(this).removeAttr("placeholder");
 	});
+	
 	$(document).on("blur", ".sort .search", function() {
 		$(this).attr("placeholder", "Find");
 	});
