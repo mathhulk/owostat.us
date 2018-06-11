@@ -1,6 +1,6 @@
 {
   "name": "owostat.us",
-  "version": "1.0.1-beta",
+  "version": "1.0.2-beta",
   "main": "index.js",
   "description": "Public status for domains available on OwO.",
   "author": "mathhulk",
@@ -9,13 +9,13 @@
     "itsaderm"
   ],
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "supervisor index.js"
   },
   "dependencies": {
     "express": "^4.16.3",
     "request": "^2.87.0"
   },
   "devDependencies": {
-    "nodemon": "^1.17.5"
+    "supervisor": "^0.12.0"
   }
 }
