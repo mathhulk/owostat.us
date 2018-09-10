@@ -7,7 +7,7 @@ Feel free to contribute to the development of owostat.us through pull requests a
 ### Run
 Node.js and npm must be installed before you can use owostat.us. 
 * Execute `yarn` to install packages and generate a lock file
-* Execute `node run start` to initialize owostat.us, which can be found on port 8999
+* Execute `npm run start` to initialize owostat.us, which can be found on port 8999
 
 ## Credit
 owostat.us was first created by [@itslukej](https://github.com/itslukej). However, the original author has since taken down the original project. The website is hosted by [@itsaderm](https://github.com/itsaderm) and can be found at https://owostat.us and the project is being maintained by mathhulk.
