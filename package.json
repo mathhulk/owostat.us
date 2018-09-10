@@ -10,8 +10,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "start": "node index.js",
-	"continuous": "nodemon index.js"
+    "start": "node main.js",
+	"continuous": "nodemon main.js"
   },
   "dependencies": {
     "express": "^4.16.3",
