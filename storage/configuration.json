@@ -1,0 +1,44 @@
+{
+	"services": {
+		"API": {
+			"uri": "https://api.awau.moe/health",
+			"method": "HEAD",
+			"code": 401,
+			
+			"href": "https://docs.whatsthisv1.apiary.io/",
+			"description": "User account and file management."
+		},
+		"GitLab": {
+			"uri": "https://owo.codes/users/sign_in",
+			"method": "HEAD",
+			"code": 200,
+			
+			"href": "https://owo.codes/",
+			"description": "Source code management and monitoring."
+		},
+		"Mastodon": {
+			"uri": "https://uwu.social/about",
+			"method": "HEAD",
+			"code": 200,
+			
+			"href": "https://uwu.social/",
+			"description": "Decentralized, open source social network."
+		},
+		"Matrix": {
+			"uri": "https://web.yuri.im",
+			"method": "HEAD",
+			"code": 200,
+			
+			"href": "https://web.yuri.im",
+			"description": "Decentralized network for secure communication."
+		},
+		"Jabber": {
+			"uri": "https://uwu.im",
+			"method": "HEAD",
+			"code": 200,
+			
+			"href": "https://uwu.im",
+			"description": "Public XMPP server running ejabberd."
+		}
+	}
+}
