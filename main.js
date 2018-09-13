@@ -5,8 +5,7 @@ const Express = require("express");
 const express = Express( );
 
 const configuration = JSON.parse(fs.readFileSync("storage/configuration.json"), "utf8");
-var templates = { };
-var status = { };
+var templates = { }, status = { };
 
 // FUNCTIONS
 function getDomains( ) {
@@ -68,7 +67,7 @@ setInterval(function( ) {
 	});
 	
 	loadStatus( );
-}, 5000);
+}, 60 * 1000 * 10);
 
 // EXPRESS
 express.use(Express.static(__dirname + "/public"));
