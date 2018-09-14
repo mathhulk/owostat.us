@@ -5,7 +5,7 @@ const Express = require("express");
 const express = Express( );
 
 const configuration = JSON.parse(fs.readFileSync("storage/configuration.json"), "utf8");
-var templates = { }, status = { };
+var status = { };
 
 // FUNCTIONS
 function getDomains( ) {
