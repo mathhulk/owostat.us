@@ -1,6 +1,6 @@
 {
   "name": "owostat.us",
-  "version": "1.1.1-beta",
+  "version": "1.1.2-beta",
   "main": "main.js",
   "description": "Public status for domains and services available on OwO.",
   "author": "mathhulk",

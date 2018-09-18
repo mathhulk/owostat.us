@@ -50,19 +50,17 @@ $(document).ready(function( ) {
 		domains = data.domains;
 		
 		$.get("templates/service.txt", function(service) {
-			setTimeout(function( ) {
-				$("#services .row").empty( );
-				
-				$.each(data.services, function(index, value) {
-					$("#services .row").append(parse(service, {"{{ status }}": value.online ? "online" : "offline", "{{ name }}": index, "{{ description }}": value.description, "{{ href }}": value.href}));
-				});
-			}, 200);
+			$("#services .row").empty( );
+			
+			$.each(data.services, function(index, value) {
+				$("#services .row").append(parse(service, {"{{ status }}": value.online ? "online" : "offline", "{{ name }}": index, "{{ description }}": value.description, "{{ href }}": value.href}));
+			});
 		});
 		
 		$.get("templates/domain.txt", function(domain) {
 			template = domain;
 			
-			setTimeout(sort, 200);
+			sort( );
 		});
 	});
 });
