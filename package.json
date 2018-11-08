@@ -1,8 +1,8 @@
 {
   "name": "owostat.us",
-  "version": "1.1.2-beta",
+  "version": "1.1.3-beta",
   "main": "main.js",
-  "description": "Public status for domains and services available on OwO.",
+  "description": "Public status page for domains and services available on OwO.",
   "author": "mathhulk",
   "contributors": [
     "itslukej",
@@ -11,13 +11,13 @@
   "license": "MIT",
   "scripts": {
     "start": "node main.js",
-	"continuous": "nodemon main.js"
+    "start-continue": "nodemon main.js"
   },
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "request": "^2.88.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.6"
   }
 }
