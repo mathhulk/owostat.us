@@ -1,13 +1,13 @@
 # owostat.us [![Build Status](https://travis-ci.org/mathhulk/owostat.us.svg?branch=master)](https://travis-ci.org/mathhulk/owostat.us)
-OwO uses a range of domains and services to provide their users with private file hosting. The purpose of owostat.us is to present the status of these services and domains to users. owostat.us has been created with Node.js and uses a multitude of HTTP requests in order to attempt connections to OwO services and domains. 
+OwO provides file hosting and other various services to their members. The owostat.us website allows visitors to view the recent status for such various domains and services in a neat and organized fashion.
 
 ## Contribute
-Feel free to contribute to the development of owostat.us through pull requests and issue/bug reporting. Contributions are always welcome and will help make this project the best that it can be. To get started, clone this project to a local folder.
+Feel free to contribute to owostat.us development through issue or pull request creation. Contributions are encouraged, as we are always trying to make the website better for visitors and allow for more complex functionality.
 
 ### Run
-Node.js and npm must be installed before you can use owostat.us. 
-* Execute `yarn` to install packages and generate a lock file
-* Execute `npm run start` to initialize owostat.us, which can be found on port 8999
+Node.js, npm and Yarn must be installed before running. 
+* Execute `yarn` via the command line to install packages and generate a lock file
+* Execute `npm run start` via the command line to run owostat.us, which will default to port 8999
 
 ## Credit
-owostat.us was first created by [@itslukej](https://github.com/itslukej). However, the original author has since taken down the original project. The website is hosted by [@itsaderm](https://github.com/itsaderm) and can be found at https://owostat.us and the project is being maintained by mathhulk.
+The original owostat.us website author was [@itslukej](https://github.com/itslukej). However, he has since taken down the project. [@itsaderm](https://github.com/itsaderm) has been hosting the website since the original author first started development on the project and the project can be found online at https://owostat.us.
