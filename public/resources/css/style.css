@@ -125,6 +125,7 @@ body {
 
 .dropdown-menu a.dropdown-item {
 	color: #282c37;
+	cursor: pointer;
 }
 
 .dropdown-item.active, .dropdown-item:active {
