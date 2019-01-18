@@ -131,3 +131,33 @@ body {
 .dropdown-item.active, .dropdown-item:active {
 	background: #f8f9fa;
 }
+
+#domains .card {
+	height: 150px;
+}
+
+#domains .card a.btn {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#domains .card a.btn:hover {
+	transform: translate(-50%, -1px);
+}
+
+.card a.btn {
+	position: absolute;
+	bottom: 20px;
+}
+
+#services .card a.btn:last-child {
+	left: calc(50% + 7.5px);
+}
+
+#services .card a.btn:not(:last-child) {
+	left: calc(50% - 107.5px);
+}
+
+#services .card {
+	height: 186px;
+}
