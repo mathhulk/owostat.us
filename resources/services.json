@@ -1,0 +1,50 @@
+[
+	{
+		"url": "https://api.awau.moe/health",
+		"method": "HEAD",
+		"code": 401,
+		"name": "API",
+		"href": "https://docs.whatsthisv1.apiary.io/",
+		"description": "User account and file management."
+	},
+	{
+		"url": "https://owo.codes/users/sign_in",
+		"method": "HEAD",
+		"code": 200,
+		"name": "GitLab",
+		"href": "https://owo.codes/",
+		"description": "Source code management and monitoring."
+	},
+	{
+		"url": "https://uwu.social/about",
+		"method": "HEAD",
+		"code": 200,
+		"name": "Mastodon",
+		"href": "https://uwu.social/",
+		"description": "Decentralized, open source social network."
+	},
+	{
+		"url": "https://web.yuri.im",
+		"method": "HEAD",
+		"code": 200,
+		"name": "Matrix",
+		"href": "https://web.yuri.im",
+		"description": "Decentralized network for secure communication."
+	},
+	{
+		"url": "https://uwu.im",
+		"method": "HEAD",
+		"code": 200,
+		"name": "Jabber",
+		"href": "https://uwu.im",
+		"description": "Public XMPP server running ejabberd."
+	},
+	{
+		"url": "https://searx.owo.cloud/about",
+		"method": "HEAD",
+		"code": 200,
+		"name": "Searx",
+		"href": "https://searx.owo.cloud/",
+		"description": "Secure search engine for everyone."
+	}
+]

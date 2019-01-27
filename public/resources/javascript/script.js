@@ -36,7 +36,7 @@ $(document).ready(function( ) {
 		sort( );
 	});
 	
-	$.get("status", function(data) {
+	$.get("api", function(data) {
 		domains = data.domains;
 		
 		$.get("resources/templates/service.tpl", function(service) {

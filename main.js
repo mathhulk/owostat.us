@@ -1,76 +1,114 @@
 const request = require("request");
+const path = require("path");
 const system = require("fs");
 
 const Express = require("express");
 const express = Express( );
 
-const configuration = JSON.parse(system.readFileSync("storage/configuration.json"), "utf8");
+const services = JSON.parse(
+	system.readFileSync(path.join(__dirname, "resources", "services.json"), "utf8")
+);
 
-let material = { };
+let domains;
+let api;
+let page;
 
-function getDomains( ) {
+function isDomain(string) {
+	return ! (
+		string.length === 0 || string.substring(0, 1) === "#" || string.includes(":")
+	);
+}
+
+function convertWildcardDomain(domain) {
+	return domain.replace("*.", "wildcard.");
+}
+
+function fetchDomainList(callback) {
 	request("https://whats-th.is/public-cdn-domains.txt", function(error, response, data) {
 		if(error) console.log(error);
 		
-		material.domains = { };
+		domains = [ ];
 		
-		data.split("\n").forEach(function(value, index) {
-			if(isDomain(value)) getDomain(parseDomain(value, false));
+		data.split("\n").forEach(function(value) {
+			if(isDomain(value)) {
+				domains.push(value);
+			}
 		});
-	});	
-}
-
-function getDomain(domain) {
-	request("https://" + domain, function(error, response, data) {
-		material.domains[parseDomain(domain, true)] = { };
 		
-		if(error) material.domains[parseDomain(domain, true)].online = false;
-		else material.domains[parseDomain(domain, true)].online = response && response.statusCode === 200;
+		callback( );
 	});
 }
 
-function isDomain(string) {
-	return !(string === "" || string.substring(0, 1) === "#" || string.includes(":"));
-}
-
-function parseDomain(domain, reverse) {
-	return reverse ? domain.replace("wildcard.", "*.") : domain.replace("*.", "wildcard.");
-}
-
-function getService(service) {
-	request(configuration.services[service].uri, configuration.services[service].method, function(error, response, data) {
-		material.services[service] = {href: configuration.services[service].href, description: configuration.services[service].description};
+function checkServices(index, callback) {
+	request({url: services[index].url, method: services[index].method, timeout: 1000}, function(error, response, data) {
+		api.services[services[index].name] = {
+			url: services[index].url,
+			name: services[index].name,
+			href: services[index].href,
+			description: services[index].description
+		};
 		
-		if(error) material.services[service].online = false;
-		else material.services[service].online = response && response.statusCode === configuration.services[service].code;
+		if(error) {
+			api.services[services[index].name].online = false;
+		} else {
+			api.services[services[index].name].online = response && response.statusCode === services[index].code;
+		}
+		
+		if(index === services.length - 1) {
+			callback( );
+		} else {
+			checkServices(index + 1, callback);
+		}
 	});
 }
 
-function getServices( ) {
-	material.services = { };
-	
-	for(let service in configuration.services) getService(service, configuration.services[service].uri, configuration.services[service].method, configuration.services[service].code);
+function checkDomains(index, callback) {
+	request({url: "https://" + convertWildcardDomain(domains[index]), timeout: 1000}, function(error, response, data) {
+		api.domains[domains[index]] = { };
+		
+		if(error) {
+			api.domains[domains[index]].online = false;
+		} else {
+			api.domains[domains[index]].online = response && response.statusCode === 200;
+		}
+		
+		if(index === domains.length - 1) {
+			callback( );
+		} else {
+			checkDomains(index + 1, callback);
+		}
+	});
 }
 
-function getMaterial( ) {
-	getDomains( );
-	getServices( );
+function initialize( ) {
+	api = {
+		services: { }, 
+		domains: { }
+	};
 	
-	setTimeout(getMaterial, 60 * 1000 * 10);
+	fetchDomainList(function( ) {
+		checkServices(0, function( ) {
+			checkDomains(0, function( ) {
+				page = api;
+				
+				setTimeout(initialize, 5000);
+			});
+		});
+	});
 }
 
-getMaterial( );
-
-express.use(Express.static(__dirname + "/public"));
+express.use(Express.static(path.join(__dirname, "public")));
 
 express.get("/", (request, response) => {
-	response.sendFile(__dirname + "/public/index.html");
+	response.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-express.get("/status", (request, response) => {
-	response.json(material);
+express.get("/api", (request, response) => {
+	response.json(page);
 });
 
 express.listen(8999);
 
 console.log("Listening on port 8999.");
+
+initialize( );
