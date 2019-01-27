@@ -2,11 +2,8 @@ let template = { };
 let domains = { };
 let search = { };
 
-if(store.get("theme") === "light") {
-	$("body").removeClass("dark");
-} else {
-	store.set("theme", "dark");
-}
+if(store.get("theme") === "light") $("body").removeClass("dark");
+else store.set("theme", "dark");
 
 $(document).ready(function( ) {
 	$(".nav-item i").click(function( ) {
@@ -16,7 +13,7 @@ $(document).ready(function( ) {
 	});
 	
 	$(document).on("click", ".dropdown-item", function( ) {
-		if($(this).hasClass("active")) {
+		if( $(this).hasClass("active") ) {
 			$(this).removeClass("active");
 			
 			delete search.online;
@@ -68,18 +65,16 @@ function sort( ) {
 	$("#domains .row").empty( );
 	
 	$.each(domains, function(index, value) {
-		if(validate(index, value)) {
-			$("#domains .row").append(replace(template, {"{{ status }}": value.online ? "online" : "offline", "{{ name }}": index, "{{ icon }}": value.online ? "check" : "times"}));
-		}
+		if( validate(index, value) ) $("#domains .row").append( replace(template, {"{{ status }}": value.online ? "online" : "offline", "{{ name }}": index, "{{ icon }}": value.online ? "check" : "times"}) );
 	});
 }
 
 function validate(domain, data) {
-	if(typeof(search.online) === "boolean" && search.online !== data.online) {
+	if(typeof(search.online) === "boolean" && ! search.online === data.online) {
 		return false;
 	}
 	
-	if(search.term && !domain.includes(search.term)) {
+	if(search.term && ! domain.includes(search.term)) {
 		return false;
 	}
 	
