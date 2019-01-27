@@ -70,13 +70,9 @@ function sort( ) {
 }
 
 function validate(domain, data) {
-	if(typeof(search.online) === "boolean" && ! search.online === data.online) {
-		return false;
-	}
+	if(typeof(search.online) === "boolean" && ! search.online === data.online) return false;
 	
-	if(search.term && ! domain.includes(search.term)) {
-		return false;
-	}
+	if( search.term && ! domain.includes(search.term) ) return false;
 	
 	return true;
 }	
