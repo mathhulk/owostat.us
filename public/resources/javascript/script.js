@@ -1,6 +1,4 @@
-let template = { };
-let domains = { };
-let search = { };
+let [template, domains, search] = { };
 
 if(store.get("theme") === "light") $("body").removeClass("dark");
 else store.set("theme", "dark");

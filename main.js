@@ -7,9 +7,7 @@ const express = Express( );
 
 const services = JSON.parse( system.readFileSync(path.join(__dirname, "resources", "services.json"), "utf8") );
 
-let domains;
-let api;
-let page;
+let domains, api, page;
 
 function isDomain(string) {
 	return ! ( string.length === 0 || string.substring(0, 1) === "#" || string.includes(":") );
