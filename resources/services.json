@@ -1,8 +1,8 @@
 [
 	{
 		"url": "https://api.awau.moe/health",
-		"method": "HEAD",
-		"code": 401,
+		"method": "GET",
+		"code": 200,
 		"name": "API",
 		"href": "https://docs.whatsthisv1.apiary.io/",
 		"description": "User account and file management."
